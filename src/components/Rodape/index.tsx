@@ -1,5 +1,9 @@
 import styled from 'styled-components';
+
 import facebook from './assets/facebook.png';
+import google from './assets/google.png';
+import instagram from './assets/instagram.png';
+import whatsapp from './assets/whatsapp.png';
 
 const RodapeEstilizado = styled.footer`
     height: 100%;
@@ -18,6 +22,7 @@ const ListaEstilizada = styled.ul`
 
 const ItemEstilizado = styled.li`
     list-style-type: none;
+    gap: 15px;
 `
 
 function Rodape() {
@@ -25,8 +30,23 @@ function Rodape() {
         <RodapeEstilizado>
             <ListaEstilizada>
                 <ItemEstilizado>
-                    <a href='#'>
+                    <a href='facebook.com'>
                         <img src={facebook} alt='Logo do Facebook' />
+                    </a>
+                </ItemEstilizado>
+                <ItemEstilizado>
+                    <a href="whatsapp.com">
+                        <img src={whatsapp} alt="logo do whatsapp" />
+                    </a>
+                </ItemEstilizado>
+                <ItemEstilizado>
+                    <a href="google.com">
+                        <img src={google} alt="logo do google" />
+                    </a>
+                </ItemEstilizado>
+                <ItemEstilizado>
+                    <a href="instagram.com">
+                        <img src={instagram} alt="logo do instagram" />
                     </a>
                 </ItemEstilizado>
             </ListaEstilizada>
