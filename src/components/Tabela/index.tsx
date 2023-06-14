@@ -5,12 +5,13 @@ import TableRow from "@mui/material/TableRow";
 import TableCell from "@mui/material/TableCell";
 import Table from "@mui/material/Table";
 import TableBody from "@mui/material/TableBody";
+import IConsulta from "../../types/IConsulta";
 
-function Tabela() {
-    return(
+function Tabela({ consultas }: { consultas: IConsulta[] | null }) {
+    return (
         <>
             <TableContainer component={Paper}>
-                <Table sx={{minWidth:700}} aria-label='tabela-customizada'>
+                <Table sx={{ minWidth: 700 }} aria-label='tabela-customizada'>
                     <TableHead>
                         <TableRow>
                             <TableCell>Data</TableCell>
@@ -22,38 +23,18 @@ function Tabela() {
                         </TableRow>
                     </TableHead>
                     <TableBody>
-                        <TableRow>
-                            <TableCell component='th' scope='row'>22/07/2023</TableCell>
-                            <TableCell component='th' scope='row'>08:30</TableCell>
-                            <TableCell component='th' scope='row'>Dra. Ana Lúcia</TableCell>
-                            <TableCell component='th' scope='row'>Angiologista</TableCell>
-                            <TableCell component='th' scope='row'>Luana Malheiros</TableCell>
-                            <TableCell component='th' scope='row'>Particular</TableCell>
-                        </TableRow>
-                        <TableRow>
-                            <TableCell component='th' scope='row'>22/07/2023</TableCell>
-                            <TableCell component='th' scope='row'>08:30</TableCell>
-                            <TableCell component='th' scope='row'>Dra. Ana Lúcia</TableCell>
-                            <TableCell component='th' scope='row'>Angiologista</TableCell>
-                            <TableCell component='th' scope='row'>Luana Malheiros</TableCell>
-                            <TableCell component='th' scope='row'>Particular</TableCell>
-                        </TableRow>
-                        <TableRow>
-                            <TableCell component='th' scope='row'>22/07/2023</TableCell>
-                            <TableCell component='th' scope='row'>08:30</TableCell>
-                            <TableCell component='th' scope='row'>Dra. Ana Lúcia</TableCell>
-                            <TableCell component='th' scope='row'>Angiologista</TableCell>
-                            <TableCell component='th' scope='row'>Luana Malheiros</TableCell>
-                            <TableCell component='th' scope='row'>Particular</TableCell>
-                        </TableRow>
-                        <TableRow>
-                            <TableCell component='th' scope='row'>22/07/2023</TableCell>
-                            <TableCell component='th' scope='row'>08:30</TableCell>
-                            <TableCell component='th' scope='row'>Dra. Ana Lúcia</TableCell>
-                            <TableCell component='th' scope='row'>Angiologista</TableCell>
-                            <TableCell component='th' scope='row'>Luana Malheiros</TableCell>
-                            <TableCell component='th' scope='row'>Particular</TableCell>
-                        </TableRow>
+                        {consultas?.map((linha) => {
+                            return (
+                                <TableRow>
+                                    <TableCell component='th' scope='row'>{linha.data}</TableCell>
+                                    <TableCell>{linha.horario}</TableCell>
+                                    <TableCell>{linha.profissional[0].nome}</TableCell>
+                                    <TableCell>{linha.profissional[0].especialidade}</TableCell>
+                                    <TableCell>{linha.paciente}</TableCell>
+                                    <TableCell>{linha.modalidade}</TableCell>
+                                </TableRow>
+                            )
+                        })}
                     </TableBody>
                 </Table>
             </TableContainer>
