@@ -14,12 +14,45 @@ function Tabela() {
                     <TableHead>
                         <TableRow>
                             <TableCell>Data</TableCell>
+                            <TableCell>Horário</TableCell>
+                            <TableCell>Profissional</TableCell>
+                            <TableCell>Especialidade</TableCell>
+                            <TableCell>Paciente</TableCell>
+                            <TableCell>Modalidade</TableCell>
                         </TableRow>
                     </TableHead>
                     <TableBody>
                         <TableRow>
                             <TableCell component='th' scope='row'>22/07/2023</TableCell>
-                            <TableCell>08:30</TableCell>
+                            <TableCell component='th' scope='row'>08:30</TableCell>
+                            <TableCell component='th' scope='row'>Dra. Ana Lúcia</TableCell>
+                            <TableCell component='th' scope='row'>Angiologista</TableCell>
+                            <TableCell component='th' scope='row'>Luana Malheiros</TableCell>
+                            <TableCell component='th' scope='row'>Particular</TableCell>
+                        </TableRow>
+                        <TableRow>
+                            <TableCell component='th' scope='row'>22/07/2023</TableCell>
+                            <TableCell component='th' scope='row'>08:30</TableCell>
+                            <TableCell component='th' scope='row'>Dra. Ana Lúcia</TableCell>
+                            <TableCell component='th' scope='row'>Angiologista</TableCell>
+                            <TableCell component='th' scope='row'>Luana Malheiros</TableCell>
+                            <TableCell component='th' scope='row'>Particular</TableCell>
+                        </TableRow>
+                        <TableRow>
+                            <TableCell component='th' scope='row'>22/07/2023</TableCell>
+                            <TableCell component='th' scope='row'>08:30</TableCell>
+                            <TableCell component='th' scope='row'>Dra. Ana Lúcia</TableCell>
+                            <TableCell component='th' scope='row'>Angiologista</TableCell>
+                            <TableCell component='th' scope='row'>Luana Malheiros</TableCell>
+                            <TableCell component='th' scope='row'>Particular</TableCell>
+                        </TableRow>
+                        <TableRow>
+                            <TableCell component='th' scope='row'>22/07/2023</TableCell>
+                            <TableCell component='th' scope='row'>08:30</TableCell>
+                            <TableCell component='th' scope='row'>Dra. Ana Lúcia</TableCell>
+                            <TableCell component='th' scope='row'>Angiologista</TableCell>
+                            <TableCell component='th' scope='row'>Luana Malheiros</TableCell>
+                            <TableCell component='th' scope='row'>Particular</TableCell>
                         </TableRow>
                     </TableBody>
                 </Table>
